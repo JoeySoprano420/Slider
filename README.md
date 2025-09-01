@@ -1,3 +1,6 @@
+
+<img width="1024" height="1024" alt="Logo" src="https://github.com/user-attachments/assets/e6c1ad29-53e1-490a-9c1e-497ed1032285" />
+
 # Slider
 
 # Paradigms (what Slider uses)
