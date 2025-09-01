@@ -1,0 +1,1 @@
+- `fmt.dec(x)` and `fmt.dgm(x)` specs.

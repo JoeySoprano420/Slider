@@ -1,0 +1,16 @@
+package hello
+
+fn main():
+    say("Hail, Twelve!")
+    let x:i64 = 2t.b12
+    say("x (dec):", x)
+
+    let sum:i64 = 0
+    for i in 0..10:
+        let sum:i64 = sum + i
+    say("sum 0..9:", sum)
+
+    if sum:
+        say("nonzero")
+    else:
+        say("zero")

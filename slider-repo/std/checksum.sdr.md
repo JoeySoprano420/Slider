@@ -1,0 +1,1 @@
+- `checksum32/64(buf)` intrinsics.

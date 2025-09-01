@@ -1,0 +1,30 @@
+package demo/acs_v1
+
+fn main():
+    say("ACS v1 demo — group select with timer (packed)")
+
+    let req:i64 = acs_chan_new(16)
+    let met:i64 = acs_chan_new(16)
+    let tck:i64 = acs_timer_new(50, 1)
+
+    let g:i64 = acs_group_new()
+    acs_group_add(g, req)
+    acs_group_add(g, met)
+    acs_group_add(g, tck)
+
+    # pretend producers exist; for demo it will just tick
+
+    let i:i64 = 0
+    while i < 8:
+        let packed:i64 = acs_group_select_recv_i64_packed(g, 500)
+        let s:i64 = acs_unpack_sel_status(packed)
+        if s == 1:
+            say("[timeout]")
+        else if s == 2:
+            say("[all closed]")
+            break
+        else:
+            let ix:i64 = acs_unpack_sel_index(packed)
+            let v:i64 = acs_unpack_sel_value(packed)
+            say("ix:", ix, "val:", v)
+        let i:i64 = i + 1

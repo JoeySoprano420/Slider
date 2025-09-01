@@ -1,0 +1,1 @@
+- `daxpy`, `dot`, `hypot` mappings and vectorization hints.

@@ -1,0 +1,14 @@
+[project]
+name = "slider-sdrc"
+version = "0.1.0"
+description = "Slider (.sdr) compiler scaffold"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["llvmlite>=0.41"]
+
+[project.scripts]
+sdrc = "sdrc.driver:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

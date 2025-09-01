@@ -1,0 +1,14 @@
+site_name: Slider (.sdr)
+theme:
+  name: material
+  features: [navigation.tabs, navigation.sections]
+repo_url: https://github.com/JoeySoprano420/slider
+nav:
+- Home: index.md
+- Getting Started: getting-started.md
+- Language: language.md
+- Concurrency (ACS): acs.md
+- FFI: ffi.md
+- Optimization: optimization.md
+- Security: security.md
+- Style Guide: style.md

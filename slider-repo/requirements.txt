@@ -1,0 +1,3 @@
+llvmlite>=0.41
+mkdocs>=1.5
+mkdocs-material>=9.5

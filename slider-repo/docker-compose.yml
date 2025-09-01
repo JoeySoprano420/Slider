@@ -1,0 +1,6 @@
+services:
+  dev:
+    build: ./containers
+    volumes:
+      - .:/work
+    tty: true
