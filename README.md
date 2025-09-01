@@ -1,7 +1,165 @@
 
 <img width="1024" height="1024" alt="Logo" src="https://github.com/user-attachments/assets/e6c1ad29-53e1-490a-9c1e-497ed1032285" />
 
-# Slider
+## Slider
+
+## _____
+
+The Slider (.sdr) Language — The Optimization-Oriented Epoch
+1. The Vision
+
+Slider is the world’s first Optimization-Oriented Programming Language (2-O-P).
+It was not built as an experiment or niche research toy, but as a full-scale industrial system language to unify what developers had long been forced to split across ecosystems:
+
+C/C++ for speed and low-level access,
+
+Rust/Ada for safety and contracts,
+
+Go/Erlang for concurrency and orchestration,
+
+Python for readability and quick onboarding,
+
+Fortran for numerics,
+
+Wasm for sandboxing and portability.
+
+Instead of compromising, Slider fuses them into a single, optimization-first universe.
+
+2. The Pillars
+
+AOT All the Way: No JIT, no runtime stalls, no guesswork. Everything lowers to LLVM, then transduces into native machine code in one sweep.
+
+Optimization as Law: Inlining, vectorization, tail-calling, constant folding, loop unrolling, PGO, coil/uncoil methods — not compiler “hints,” but first-class, rule-governed citizens.
+
+ACS Concurrency: Assigned-Channel-Superimposed multitasking; channels, groups, timers, and N-way select for predictable, NUMA-aware parallelism.
+
+Contracts & Memory Banks: Formal requires/ensures, scoped memory banks, arenas, and registers — controlling safety, locality, and placement with precision.
+
+Interoperability without Pain: Native C ABI, smooth C++ FFI, opaque handles for complex types, Wasm modules, Python ctypes, Go cgo, Node N-API — all out of the box.
+
+Base-12 Numerics (Dodecagrams): 0,1,2,3,4,5,6,7,8,9,t,e — a new numeric dimension alongside base-10 and base-16.
+
+Security through Design: Regex compiled AOT, quarantined unsafe zones, priming against buffer overflows/injections, reproducible builds, hardened binaries.
+
+Readable yet Regal Prose: Syntax blends Go+Erlang’s lightness, Python’s grammar, C#’s semantics, Ada’s contracts, and intuitive layman’s linguistics — all wrapped in coherent indentation rules.
+
+3. Paradigms
+
+Slider is not “multi-paradigm” in the usual sense — it is para-unified:
+
+Systems Language: Full control over memory, threads, layout, and CPU features.
+
+Functional Taste: Pure functions, algebraic reasoning, compositional macros.
+
+Object Flavor: Traits, inheritance (final by default), RAII drops.
+
+Concurrent Model: ACS channels, timers, and deterministic select loops.
+
+Optimization-Oriented Core: Every construct exists in relationship to performance, determinism, and predictability.
+
+4. The Instance Model
+
+Value by Default: Instances are statically mutable inside scope, but with safe scoping and banks.
+
+Contracts Guarded: init and drop blocks ensure correctness; invalid states are compile-time errors.
+
+Memory Placement: Banks/arenas dictate stack vs heap vs region, with explicit resource allocation (aloc, maloc, free).
+
+Concurrency-Aware: Passing across tasks requires capabilities; default is copy/move through channels.
+
+FFI Boundaries: Instances either match POD layout or cross as opaque handles.
+
+5. Performance & Loading
+
+Startup: Native binary — launches in milliseconds, OS-loader bound.
+
+Throughput: Matches or exceeds C/C++/Rust in hot loops when contracts and profiles are used.
+
+Concurrency: ACS throughput rivals or beats Go/Erlang message passing, without GC pauses.
+
+Optimization Pipeline: Contracts feed llvm.assume; dead code elimination trims checks; tapered inlining and coil/uncoil folding shape hot paths; PGO “Insight” auto-scopes real workloads.
+
+6. Safety
+
+Rust/Ada-class safety in the safe subset (contracts, banks, capabilities).
+
+Quarantine for unsafe zones: raw FFI and pointer ops isolated and hardened.
+
+Priming: automatic defense injections against buffer overflows, UAF, side-channel exploits.
+
+Compile-time regex validation: catastrophic patterns rejected before you ship.
+
+Checksums & SBOM: reproducible builds, supply-chain integrity.
+
+7. Interoperability
+
+C ABI: zero-cost, first-class.
+
+C++: through headers or shims.
+
+Rust/Go/Ada/Fortran: via C bridges.
+
+Python: ctypes/cffi, embedding.
+
+Node: N-API, compiled addons.
+
+Wasm: --target wasm32-wasip1 for portable sandboxing.
+
+Slider’s ethos: “Bring your stack, we’ll slot in.”
+
+8. Real-World Uses
+
+Financial systems: low-latency trading, fraud detection, crypto primitives.
+
+Telecom/5G: realtime packet routing, signaling.
+
+Robotics & control: motor loops, safety-critical guidance.
+
+Gaming: physics engines, realtime networking, high-frequency simulation.
+
+Cloud infra: telemetry agents, proxies, service meshes, load balancers.
+
+Scientific/HPC: numerics, matrix ops, vectorized loops.
+
+Security: constant-time crypto, hardened binaries, reproducible builds.
+
+9. Comparative Positioning
+
+vs C/C++: equally fast, much safer defaults, cleaner concurrency.
+
+vs Rust: similar guarantees in safe subset; contracts & rulesets instead of borrow checker.
+
+vs Go: faster, no GC jitter, stronger control of memory/layout.
+
+vs Python: orders-of-magnitude faster; interop for hot kernels.
+
+vs Ada/Fortran: Ada-like assurance + Fortran-grade numerics, in a modern unified syntax.
+
+10. Why Choose Slider?
+
+If you need speed of C, safety of Rust/Ada, concurrency of Go/Erlang, interop of C/Python/Node, all while making optimization a first-class citizen — Slider is the one stop.
+
+It was created to end the fragmentation of toolchains: no more bolting languages together for each property. Slider is one language, optimization-first, rule-driven, real-world-ready.
+
+11. The Future
+
+Expanding ACS runtime to full network IO (epoll/kqueue/IOCP).
+
+GPU kernels and accelerators as first-class targets.
+
+Wider package ecosystem (sdrp).
+
+Formal proof engines integrated with contracts.
+
+Incremental compiles + LSP autocompletion for productivity.
+
+Hardened pipelines for mission-critical and aerospace certification.
+
+12. Tagline
+
+Slider (.sdr): C-class performance, Rust/Ada-grade safety, Go/Erlang-style concurrency, Python-level clarity — all fused under Optimization-Oriented Programming.
+
+## __
 
 # Paradigms (what Slider uses)
 
@@ -16,7 +174,7 @@
 
 ---
 
-# Instances: how Slider handles them
+## Instances: how Slider handles them
 
 Think “predictable, value-semantics by default” with explicit control when you want it.
 
@@ -174,156 +332,3 @@ Practical guidance: if you can match data layouts and enable the 2-O-P knobs (co
 
 ## _____
 
-The Slider (.sdr) Language — The Optimization-Oriented Epoch
-1. The Vision
-
-Slider is the world’s first Optimization-Oriented Programming Language (2-O-P).
-It was not built as an experiment or niche research toy, but as a full-scale industrial system language to unify what developers had long been forced to split across ecosystems:
-
-C/C++ for speed and low-level access,
-
-Rust/Ada for safety and contracts,
-
-Go/Erlang for concurrency and orchestration,
-
-Python for readability and quick onboarding,
-
-Fortran for numerics,
-
-Wasm for sandboxing and portability.
-
-Instead of compromising, Slider fuses them into a single, optimization-first universe.
-
-2. The Pillars
-
-AOT All the Way: No JIT, no runtime stalls, no guesswork. Everything lowers to LLVM, then transduces into native machine code in one sweep.
-
-Optimization as Law: Inlining, vectorization, tail-calling, constant folding, loop unrolling, PGO, coil/uncoil methods — not compiler “hints,” but first-class, rule-governed citizens.
-
-ACS Concurrency: Assigned-Channel-Superimposed multitasking; channels, groups, timers, and N-way select for predictable, NUMA-aware parallelism.
-
-Contracts & Memory Banks: Formal requires/ensures, scoped memory banks, arenas, and registers — controlling safety, locality, and placement with precision.
-
-Interoperability without Pain: Native C ABI, smooth C++ FFI, opaque handles for complex types, Wasm modules, Python ctypes, Go cgo, Node N-API — all out of the box.
-
-Base-12 Numerics (Dodecagrams): 0,1,2,3,4,5,6,7,8,9,t,e — a new numeric dimension alongside base-10 and base-16.
-
-Security through Design: Regex compiled AOT, quarantined unsafe zones, priming against buffer overflows/injections, reproducible builds, hardened binaries.
-
-Readable yet Regal Prose: Syntax blends Go+Erlang’s lightness, Python’s grammar, C#’s semantics, Ada’s contracts, and intuitive layman’s linguistics — all wrapped in coherent indentation rules.
-
-3. Paradigms
-
-Slider is not “multi-paradigm” in the usual sense — it is para-unified:
-
-Systems Language: Full control over memory, threads, layout, and CPU features.
-
-Functional Taste: Pure functions, algebraic reasoning, compositional macros.
-
-Object Flavor: Traits, inheritance (final by default), RAII drops.
-
-Concurrent Model: ACS channels, timers, and deterministic select loops.
-
-Optimization-Oriented Core: Every construct exists in relationship to performance, determinism, and predictability.
-
-4. The Instance Model
-
-Value by Default: Instances are statically mutable inside scope, but with safe scoping and banks.
-
-Contracts Guarded: init and drop blocks ensure correctness; invalid states are compile-time errors.
-
-Memory Placement: Banks/arenas dictate stack vs heap vs region, with explicit resource allocation (aloc, maloc, free).
-
-Concurrency-Aware: Passing across tasks requires capabilities; default is copy/move through channels.
-
-FFI Boundaries: Instances either match POD layout or cross as opaque handles.
-
-5. Performance & Loading
-
-Startup: Native binary — launches in milliseconds, OS-loader bound.
-
-Throughput: Matches or exceeds C/C++/Rust in hot loops when contracts and profiles are used.
-
-Concurrency: ACS throughput rivals or beats Go/Erlang message passing, without GC pauses.
-
-Optimization Pipeline: Contracts feed llvm.assume; dead code elimination trims checks; tapered inlining and coil/uncoil folding shape hot paths; PGO “Insight” auto-scopes real workloads.
-
-6. Safety
-
-Rust/Ada-class safety in the safe subset (contracts, banks, capabilities).
-
-Quarantine for unsafe zones: raw FFI and pointer ops isolated and hardened.
-
-Priming: automatic defense injections against buffer overflows, UAF, side-channel exploits.
-
-Compile-time regex validation: catastrophic patterns rejected before you ship.
-
-Checksums & SBOM: reproducible builds, supply-chain integrity.
-
-7. Interoperability
-
-C ABI: zero-cost, first-class.
-
-C++: through headers or shims.
-
-Rust/Go/Ada/Fortran: via C bridges.
-
-Python: ctypes/cffi, embedding.
-
-Node: N-API, compiled addons.
-
-Wasm: --target wasm32-wasip1 for portable sandboxing.
-
-Slider’s ethos: “Bring your stack, we’ll slot in.”
-
-8. Real-World Uses
-
-Financial systems: low-latency trading, fraud detection, crypto primitives.
-
-Telecom/5G: realtime packet routing, signaling.
-
-Robotics & control: motor loops, safety-critical guidance.
-
-Gaming: physics engines, realtime networking, high-frequency simulation.
-
-Cloud infra: telemetry agents, proxies, service meshes, load balancers.
-
-Scientific/HPC: numerics, matrix ops, vectorized loops.
-
-Security: constant-time crypto, hardened binaries, reproducible builds.
-
-9. Comparative Positioning
-
-vs C/C++: equally fast, much safer defaults, cleaner concurrency.
-
-vs Rust: similar guarantees in safe subset; contracts & rulesets instead of borrow checker.
-
-vs Go: faster, no GC jitter, stronger control of memory/layout.
-
-vs Python: orders-of-magnitude faster; interop for hot kernels.
-
-vs Ada/Fortran: Ada-like assurance + Fortran-grade numerics, in a modern unified syntax.
-
-10. Why Choose Slider?
-
-If you need speed of C, safety of Rust/Ada, concurrency of Go/Erlang, interop of C/Python/Node, all while making optimization a first-class citizen — Slider is the one stop.
-
-It was created to end the fragmentation of toolchains: no more bolting languages together for each property. Slider is one language, optimization-first, rule-driven, real-world-ready.
-
-11. The Future
-
-Expanding ACS runtime to full network IO (epoll/kqueue/IOCP).
-
-GPU kernels and accelerators as first-class targets.
-
-Wider package ecosystem (sdrp).
-
-Formal proof engines integrated with contracts.
-
-Incremental compiles + LSP autocompletion for productivity.
-
-Hardened pipelines for mission-critical and aerospace certification.
-
-12. Tagline
-
-Slider (.sdr): C-class performance, Rust/Ada-grade safety, Go/Erlang-style concurrency, Python-level clarity — all fused under Optimization-Oriented Programming.
